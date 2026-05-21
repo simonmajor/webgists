@@ -1,16 +1,24 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta name="generator" content="HTML Tidy for HTML5 for Apple macOS version 5.8.0" />
         <meta charset="UTF-8" />
         <title>Briefing: Domestic data cabling and AV trunking</title>
         <meta name="robots" content="noindex,nofollow" />
         <link rel="stylesheet" href="styles.css" />
+        <script>
+            const ghUsername = "simonmajor";
+            const ghRepo = "webgists";
+            const ghBasePath = "wiring_etc";
+        </script>
     </head>
     <body>
         <h1>
             Published at:
-            <a href="https://webgists.vercel.app/wiring_etc" target="_top">https://webgists.vercel.app/wiring_etc</a>
+            <script>
+                document.write(
+                    `<a href="https://${ghUsername}.github.io/${ghRepo}/${ghBasePath}"" target="_top">https://${ghUsername}.github.io/${ghRepo}/${ghBasePath}</a>`
+                );
+            </script>
         </h1>
         <a href="./pano_extract.jpeg"><img src="./pano_extract.jpeg" style="width: 100%" /></a>
         <p>
@@ -89,16 +97,15 @@
         </p>
 
         <script>
-            const ghUsername = "simonmajor";
-            const ghRepo = "webgists";
-            const ghBasePath = "wiring_etc";
             (async () => {
-                const response = await fetch(`https://api.github.com/repos/${ghUsername}/${ghRepo}/contents/${ghBasePath}`);
+                const response = await fetch(
+                    `https://api.github.com/repos/${ghUsername}/${ghRepo}/contents/${ghBasePath}`
+                );
                 const data = await response.json();
                 let htmlString = "<ul>";
 
                 for (let file of data) {
-                    htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
+                    htmlString += `<li><a href="https://${ghUsername}.github.io/${ghRepo}/${file.path}">${file.name}</a></li>`;
                 }
 
                 htmlString += "</ul>";
