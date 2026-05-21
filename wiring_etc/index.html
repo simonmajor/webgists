@@ -91,7 +91,8 @@
         <script>
             const ghUsername = "simonmajor";
             const ghRepo = "webgists";
-            const ghBasePath = "wiring_etc"(async () => {
+            const ghBasePath = "wiring_etc";
+            (async () => {
                 const response = await fetch("https://api.github.com/repos/${ghUsername}/${ghRepo}/contents/${ghRepo}");
                 const data = await response.json();
                 let htmlString = "<ul>";
