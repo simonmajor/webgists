@@ -17,10 +17,10 @@ iframe.full {
 
 .subst {
     margin-block: 0;
-    body,
-    iframe {
-        margin-inline: 0;
-    }
     padding: 0;
     display: block flow;
+}
+
+body.subst {
+    margin-inline: 0;
 }
