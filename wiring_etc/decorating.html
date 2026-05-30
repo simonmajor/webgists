@@ -15,22 +15,31 @@
         </script>
     </head>
     <body>
-        <h2><a href="." target="_top">Back Up to Parent Folder</a></h2>
-        <h2>
-            Published at:
-            <script>
-                document.write(
-                    `<a href="https://${ghUsername}.github.io/${ghRepo}/${ghBasePath}/decorating.html" target="_top">https://${ghUsername}.github.io/${ghRepo}/${ghBasePath}/decorating.html</a>`
-                );
-            </script>
-        </h2>
+        <nav>
+            <h2><a href="." target="_top">Back Up to Parent Folder</a></h2>
+            <h2>
+                Published at:
+                <script>
+                    document.write(
+                        `<a href="https://${ghUsername}.github.io/${ghRepo}/${ghBasePath}/decorating.html" target="_top">https://${ghUsername}.github.io/${ghRepo}/${ghBasePath}/decorating.html</a>`
+                    );
+                </script>
+            </h2>
+        </nav>
 
         <h1>Briefing: Decorating</h1>
 
         <p>Lorem ipsum</p>
 
-        <iframe class="full" src="includes/files_pre.html" title="Files Include" sandbox style="height: 8em"></iframe>
-        <script src="includes/files.js"></script>
-        <div id="listing"></div>
+        <section class="files">
+            <iframe
+                class="full"
+                src="includes/files_pre.html"
+                title="Files Include"
+                sandbox="allow-scripts"
+                style="height: 6rlh"></iframe>
+            <script src="includes/files.js"></script>
+            <div id="listing"></div>
+        </section>
     </body>
 </html>
