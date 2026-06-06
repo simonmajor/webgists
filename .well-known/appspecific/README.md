@@ -9,3 +9,6 @@
 }
 ```
 
+`( cd /Users/simonmajor/Library/CloudStorage/OneDrive-Personal/odgh/webgists/ ; npm install http-server )`
+
+`( cd /Users/simonmajor/Library/CloudStorage/OneDrive-Personal/odgh/webgists/ ; node_modules/http-server/bin/http-server -p 8000 )`

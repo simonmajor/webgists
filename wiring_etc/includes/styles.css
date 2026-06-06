@@ -6,10 +6,10 @@
 
 iframe.full {
     width: 100%;
-    /* height: auto; */
-    min-height: 5rlh;
+    /*height: auto;*/
+    /*min-height: 6rlh;*/
     display: block flow;
-    overflow: auto;
+    overflow: hidden;
     border: none;
     margin: 0;
     padding: 0;
