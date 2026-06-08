@@ -15,7 +15,9 @@
         <link rel="dns-prefetch" href="https://${ghUsername}.github.io" />
         <link rel="prefetch" href="https://${ghUsername}.github.io/${ghRepo}/${ghBasePath}/includes/styles.css" />
         <link rel="prefetch" href="pano_extract.jpeg" />
+        <link rel="prefetch" href="includes/ifparent.js" />
         <link rel="prefetch" href="includes/files.js" />
+        <link rel="prefetch" href="includes/ifchild.js" />
     </head>
     <body>
         <nav>
@@ -112,14 +114,12 @@
 
         <section class="files">
             <iframe
-                id="dynamic-iframe"
                 class="full"
                 src="includes/files_pre.html"
                 title="Files Include"
                 sandbox="allow-scripts allow-same-origin"></iframe>
-            <!-- style="height: 6.5rlh"></iframe> -->
-            <!-- onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' -->
             <div class="subst" id="listing"></div>
+            <script src="includes/ifparent.js"></script>
             <script src="includes/files.js"></script>
         </section>
     </body>

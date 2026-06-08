@@ -13,7 +13,9 @@
         </script>
         <link rel="dns-prefetch" href="https://${ghUsername}.github.io" />
         <link rel="prefetch" href="https://${ghUsername}.github.io/${ghRepo}/${ghBasePath}/includes/styles.css" />
+        <link rel="prefetch" href="../includes/ifparent.js" />
         <link rel="prefetch" href="../includes/files.js" />
+        <link rel="prefetch" href="../includes/ifchild.js" />
     </head>
     <body>
         <nav>
@@ -38,7 +40,7 @@
                 src="../includes/files_pre.html"
                 title="Files Include"
                 sandbox="allow-scripts"></iframe>
-            <!-- style="height: 6.5rlh"></iframe> -->
+            <script src="../includes/ifparent.js"></script>
             <script src="../includes/files.js"></script>
             <div id="listing"></div>
         </section>
