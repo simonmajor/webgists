@@ -1,27 +1,29 @@
 function resizeIframe(iframe) {
-    console.log("resizeIframe entry");
-    const doc = iframe.contentDocument;
+    // console.debug("resizeIframe entry");
 
+    const doc = iframe.contentDocument || iframe.contentWindow.document;
     if (!doc) return;
 
+    /* console.log(doc.body.outerHTML);
+    console.log("body.scrollHeight", doc.body.scrollHeight);
+    console.log("documentElement.scrollHeight", doc.documentElement.scrollHeight);
+    console.log("body.offsetHeight", doc.body.offsetHeight);
+    console.log("documentElement.offsetHeight", doc.documentElement.offsetHeight);
+    console.log("body", doc.body.scrollHeight, doc.body.offsetHeight);
+    console.log("html", getComputedStyle(doc.documentElement).height);
+    console.log("body css", getComputedStyle(doc.body).height); */
+
     const update = () => {
-        console.debug("update entry");
-        const height =
-            Math.max(
-                doc.body.scrollHeight,
-                doc.documentElement.scrollHeight,
-                doc.body.offsetHeight,
-                doc.documentElement.offsetHeight
-            ) + "px";
-        console.debug("Type of height:", typeof height, "Value:", height);
-        iframe.style.height = height;
+        // console.debug("update entry");
+        const height = doc.documentElement.getBoundingClientRect().height;
+        iframe.style.height = `${Math.ceil(height)}px`;
+        // console.debug("Type of height:", typeof height, "Value:", height);
     };
 
-    requestAnimationFrame(update);
+    /* requestAnimationFrame(update);
 
-    setTimeout(update, 50);
-    setTimeout(update, 250);
-    setTimeout(update, 1000);
+    setTimeout(() => resizeIframe(iframe), 100); */
+    update();
 }
 
 document.querySelectorAll("iframe.full").forEach((iframe) => {
@@ -38,10 +40,10 @@ document.querySelectorAll("iframe.full").forEach((iframe) => {
 and a ifchild.js id="wiring1"
 
 */
-window.addEventListener("message", (event) => {
+/* window.addEventListener("message", (event) => {
     if (event.data.type !== "iframeHeight") return;
 
     const iframe = document.getElementById(event.data.id);
 
     if (iframe) iframe.style.height = `${event.data.height}px`;
-});
+}); */
