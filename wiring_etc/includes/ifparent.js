@@ -24,10 +24,20 @@ function resizeIframe(iframe) {
 
     setTimeout(() => resizeIframe(iframe), 100); */
     update();
+
+    /* Problems with the earlier versions:
+     * body.scrollHeight → measures only the body content (~79px)
+     * documentElement.scrollHeight → polluted by the iframe’s default viewport height (150px)
+     * documentElement.getBoundingClientRect().height → measures the actual rendered document (~116.5px)
+     */
 }
 
 document.querySelectorAll("iframe.full").forEach((iframe) => {
-    iframe.addEventListener("load", () => resizeIframe(iframe));
+    iframe.addEventListener("load", () => {
+        resizeIframe(iframe);
+        const doc = iframe.contentDocument || iframe.contentWindow.document;
+        new ResizeObserver(() => resizeIframe(iframe)).observe(doc.documentElement);
+    });
 });
 
 /* For use with parents:

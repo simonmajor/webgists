@@ -12,7 +12,8 @@
             const ghRepo = "webgists";
             const ghBasePath = "wiring_etc";
         </script>
-        <link rel="dns-prefetch" href="https://${ghUsername}.github.io" />
+        <!-- <link rel="dns-prefetch" href="https://${ghUsername}.github.io" /> -->
+        <link rel="dns-prefetch" href="https://api.github.com" />
         <link rel="prefetch" href="https://${ghUsername}.github.io/${ghRepo}/${ghBasePath}/includes/styles.css" />
         <link rel="prefetch" href="pano_extract.jpeg" />
         <link rel="prefetch" href="includes/ifparent.js" />
@@ -20,7 +21,7 @@
         <link rel="prefetch" href="includes/ifchild.js" />
     </head>
     <body>
-        <nav>
+        <header>
             <h2>
                 Published at:
                 <script>
@@ -29,98 +30,234 @@
                     );
                 </script>
             </h2>
-        </nav>
-        <!-- <h1>Briefing: Domestic data cabling and AV trunking</h1>  -->
-        <!-- <a href="pano_extract.jpeg"
-            ><img class="center80" src="pano_extract.jpeg" alt="Extracted Panorama view of lounge wall"
+            <!-- <h1>Briefing: Domestic data cabling and AV trunking</h1>  -->
+        </header>
+        <main>
+            <!-- <a href="pano_extract.jpeg"
+            ><img
+                class="center80"
+                src="pano_extract.jpeg"
+                alt="Extracted Panorama view of lounge wall"
+                style="aspect-ratio: 5536 / 3168"
         /></a> -->
-        <p>
-            The photo above has power and aerial sockets above the fireplace for a wall-mounted TV. The dining zone is
-            to the left (next to the kitchen). That makes the right half of the room the lounge area, so a wall-mounted
-            TV should be offset to the right. There is another set of aerial and satellite sockets at the right-hand end
-            of the wall! We are also missing an AV duct from behind such a TV for HDMI cables. Ideally the wall mount
-            would be in a recess, subject to construction constraints. The original wiring diagram implies they should
-            be in that preferred offset location. There are telephone sockets in both the left and right low socket
-            clusters. The property is flooded with power, aerial, and telephone ports, which is nice. More unusually, it
-            has many blanks; two are visible high on the adjacent walls in the photo above. Telephone sockets are less
-            useful these days, so the second tranch of work would be flood the property with structured network cabling
-            to a mini patch panel in the cupboard by the BT master socket.
-        </p>
+            <p>
+                The photo above has power and aerial sockets above the fireplace for a wall-mounted TV. The dining zone
+                is to the left (next to the kitchen). That makes the right half of the room the lounge area, so a
+                wall-mounted TV should be offset to the right. There is another set of aerial and satellite sockets at
+                the right-hand end of the wall! We are also missing an AV duct from behind such a TV for HDMI cables.
+                Ideally the wall mount would be in a recess, subject to construction constraints. The original wiring
+                diagram implies they should be in that preferred offset location. There are telephone sockets in both
+                the left and right low socket clusters. The property is flooded with power, aerial, and telephone ports,
+                which is nice. More unusually, it has many blanks; two are visible high on the adjacent walls in the
+                photo above. Telephone sockets are less useful these days, so the second tranch of work would be flood
+                the property with structured network cabling to a mini patch panel in the cupboard by the BT master
+                socket.
+            </p>
 
-        <p>
-            There is a bundle of disconnected data / signal cabling near the master socket. It was assumed these were
-            telephone extensions, and this would be a pulling exercise to replace the (dead) phone ports with ethernet
-            ones. Instead, the master socket and all the extension ports are live. Curious about the cable bundle and
-            all the blanks, I opened everything up. All the blanks have data cabling! About 50% is certified Cat 5E,
-            with the remainder being unlabelled, low-grade 4-pair cable that may match the disconnected bundle. It
-            therefore becomes a cable tracing and testing exercise. Most of the blanks are in high locations, which is
-            hardly ideal. Given the length of cables, there is limited scope to move them without splices, pulls, or
-            complete replacement. I do not know if the questionable quality of some of the cable leaves much scope for
-            splicing.
-        </p>
+            <p>
+                There is a bundle of disconnected data / signal cabling near the master socket. It was assumed these
+                were telephone extensions, and this would be a pulling exercise to replace the (dead) phone ports with
+                ethernet ones. Instead, the master socket and all the extension ports are live. Curious about the cable
+                bundle and all the blanks, I opened everything up. All the blanks have data cabling! About 50% is
+                certified Cat 5E, with the remainder being unlabelled, low-grade 4-pair cable that may match the
+                disconnected bundle. It therefore becomes a cable tracing and testing exercise. Most of the blanks are
+                in high locations, which is hardly ideal. Given the length of cables, there is limited scope to move
+                them without splices, pulls, or complete replacement. I do not know if the questionable quality of some
+                of the cable leaves much scope for splicing.
+            </p>
 
-        <p>
-            The wiring diagram indicates that one of the two telephone ports in the lounge should be a data port rather
-            than a telephone port. The closest match on the wiring diagram for the blanks are the red runs.
-            Unfortunately, those aren't identified in the key. Bizarrely, there are data cable blanks in the bathroom
-            and en-suite! The wiring diagram indicates provisions for Aquavision IP-rated TVs.
-        </p>
+            <p>
+                The wiring diagram indicates that one of the two telephone ports in the lounge should be a data port
+                rather than a telephone port. The closest match on the wiring diagram for the blanks are the red runs.
+                Unfortunately, those aren't identified in the key. Bizarrely, there are data cable blanks in the
+                bathroom and en-suite! The wiring diagram indicates provisions for Aquavision IP-rated TVs.
+            </p>
 
-        <details>
-            <summary>Construction:</summary>
+            <details>
+                <summary>Construction:</summary>
 
-            <ul>
-                <li>
-                    From the related flat construction plan "Gyproc Gyplyner Universal metal framed wall lining system
-                    faced with 12.5mm plasterboard over 18mm ply lining to give overall 80mm." The wall socket boxes are
-                    all deep-seated, consistent with that depth.
-                </li>
+                <ul>
+                    <li>
+                        From the related flat construction plan "Gyproc Gyplyner Universal metal framed wall lining
+                        system faced with 12.5mm plasterboard over 18mm ply lining to give overall 80mm." The wall
+                        socket boxes are all deep-seated, consistent with that depth.
+                    </li>
 
-                <li>
-                    I measured a 24cm ceiling void above one of the bathroom spotlight positions. I have not checked the
-                    rest, but I can say that the bathroom is lower than most of the apartment, and the hallway is lower
-                    still. Other than they seem fairly consistent.
-                </li>
+                    <li>
+                        I measured a 24cm ceiling void above one of the bathroom spotlight positions. I have not checked
+                        the rest, but I can say that the bathroom is lower than most of the apartment, and the hallway
+                        is lower still. Other than they seem fairly consistent.
+                    </li>
 
-                <li>Excluding the bathroom and en-suite, all ceilings are coved</li>
+                    <li>Excluding the bathroom and en-suite, all ceilings are coved</li>
 
-                <li>There is skirting everywhere you would expect it.</li>
+                    <li>There is skirting everywhere you would expect it.</li>
 
-                <li>Hot water underfloor heating.</li>
-            </ul>
-        </details>
-        <details>
-            <summary>Internet:</summary>
+                    <li>Hot water underfloor heating.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Internet:</summary>
 
-            <ul>
-                <li>
-                    The building is FTTP ready, and OpenReach will only provision fibre despite there being a live VDSL
-                    signal.
-                </li>
+                <ul>
+                    <li>
+                        The building is FTTP ready, and OpenReach will only provision fibre despite there being a live
+                        VDSL signal.
+                    </li>
 
-                <li>
-                    Fiber is run to above front door. They will need to drill through the wall and install the Optical
-                    Network Terminal.
-                </li>
+                    <li>
+                        Fiber is run to above front door. They will need to drill through the wall and install the
+                        Optical Network Terminal.
+                    </li>
 
-                <li>An ISP order has not been raised yet.</li>
-            </ul>
-        </details>
+                    <li>An ISP order has not been raised yet.</li>
+                </ul>
+            </details>
 
-        <p>
-            Hopefully, I have provided enough material for you to say whether you can undertake this project, and
-            outline a quote, subject to survey. There is a lot going on there, so please call if you have any queries.
-        </p>
+            <p>
+                Hopefully, I have provided enough material for you to say whether you can undertake this project, and
+                outline a quote, subject to survey. There is a lot going on there, so please call if you have any
+                queries.
+            </p>
 
-        <section class="files">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+
             <iframe
+                id="delivacc"
                 class="full"
-                src="includes/files_pre.html"
-                title="Files Include"
+                src="includes/delivery_access.html"
+                title="Delivery Access"
                 sandbox="allow-scripts allow-same-origin"></iframe>
-            <div class="subst" id="listing"></div>
-            <script src="includes/ifparent.js"></script>
-            <script src="includes/files.js"></script>
-        </section>
+        </main>
+        <footer>
+            <section class="files">
+                <iframe
+                    class="full"
+                    src="includes/files_pre.html"
+                    title="Files Include"
+                    sandbox="allow-scripts allow-same-origin"></iframe>
+                <div class="subst" id="listing"></div>
+                <script src="includes/ifparent.js"></script>
+                <script src="includes/files.js"></script>
+            </section>
+        </footer>
     </body>
 </html>

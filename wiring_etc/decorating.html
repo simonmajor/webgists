@@ -12,35 +12,42 @@
             const ghRepo = "webgists";
             const ghBasePath = "wiring_etc";
         </script>
-        <link rel="dns-prefetch" href="https://${ghUsername}.github.io" />
+        <!-- <link rel="dns-prefetch" href="https://${ghUsername}.github.io" /> -->
+        <link rel="dns-prefetch" href="https://api.github.com" />
         <link rel="prefetch" href="https://${ghUsername}.github.io/${ghRepo}/${ghBasePath}/includes/styles.css" />
-        <link rel="prefetch" href="pano_extract.jpeg" />
         <link rel="prefetch" href="includes/ifparent.js" />
         <link rel="prefetch" href="includes/files.js" />
         <link rel="prefetch" href="includes/ifchild.js" />
     </head>
     <body>
-        <nav>
-            <h2><a href="." target="_top">Back Up to Parent Folder</a></h2>
-            <h2>
-                Published at:
-                <script>
-                    document.write(
-                        `<a href="https://${ghUsername}.github.io/${ghRepo}/${ghBasePath}/decorating.html" target="_top">https://${ghUsername}.github.io/${ghRepo}/${ghBasePath}/decorating.html</a>`
-                    );
-                </script>
-            </h2>
-        </nav>
-
-        <h1>Briefing: Decorating</h1>
-
-        <p>Lorem ipsum</p>
-
-        <section class="files">
-            <iframe class="full" src="includes/files_pre.html" title="Files Include" sandbox="allow-scripts"></iframe>
-            <script src="includes/ifparent.js"></script>
-            <script src="includes/files.js"></script>
-            <div id="listing"></div>
-        </section>
+        <header>
+            <nav>
+                <h2><a href="." target="_top">Back Up to Parent Folder</a></h2>
+                <h2>
+                    Published at:
+                    <script>
+                        document.write(
+                            `<a href="https://${ghUsername}.github.io/${ghRepo}/${ghBasePath}/decorating.html" target="_top">https://${ghUsername}.github.io/${ghRepo}/${ghBasePath}/decorating.html</a>`
+                        );
+                    </script>
+                </h2>
+            </nav>
+            <h1>Briefing: Decorating</h1>
+        </header>
+        <main>
+            <p>Lorem ipsum</p>
+        </main>
+        <footer>
+            <section class="files">
+                <iframe
+                    class="full"
+                    src="includes/files_pre.html"
+                    title="Files Include"
+                    sandbox="allow-scripts"></iframe>
+                <script src="includes/ifparent.js"></script>
+                <script src="includes/files.js"></script>
+                <div id="listing"></div>
+            </section>
+        </footer>
     </body>
 </html>
