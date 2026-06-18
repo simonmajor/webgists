@@ -1,5 +1,7 @@
 [Automatic Workspace connection in Chrome DevTools](https://developer.chrome.com/docs/devtools/automatic-workspaces)
 
+Save as `com.chrome.devtools.json`:
+
 ```
 {
   "workspace": {
