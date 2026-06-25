@@ -5,6 +5,13 @@
     aspect-ratio: 4032 × 3024;
 }
 
+.centervert {
+    display: block;
+    margin-inline: auto;
+    max-width: 60%;
+    aspect-ratio: 3024 x 4032;
+}
+
 iframe.full {
     width: 100%;
     /*height: auto;*/
